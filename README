@@ -1,0 +1,29 @@
+primes v0.1.0 - jaimemccann@yandex.com
+This quasi-"hello world" serves as my foray into GNU Autotools.
+It is usable to maintain a rudimentary database of prime numbers.
+
+USAGE:
+primes [OPTIONS]
+Without options, prints all primes currently stored in the primes file.
+
+OPTIONS:
+-n N            Print N primes. Generate as needed.
+-u N            Print primes up to and maybe including N. Generate as needed.
+-d              Dry run. Do not save generated primes.
+-f N            Print the prime factorization of N. Generate as needed.
+
+ENVIRONMENT VARIABLES:
+PRIMES_FILE
+Should contain the path to the list of known primes.
+If the file does not exist, it will be created when any primes are generated,
+unless -d is passed.
+If this environment variable is empty, the following paths will be checked,
+and the first existing file will be used:
+    $HOME/.local/var/list-of-primes
+    $HOME/.config/list-of-primes
+    $HOME/.list-of-primes
+    /usr/local/var/list-of-primes
+    /usr/var/list-of-primes
+    /var/list-of-primes
+If none of these files exist, the paths will be checked again,
+and the first writable path will be used.

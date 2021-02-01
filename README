@@ -1,4 +1,4 @@
-primes v0.1.0 - jaimemccann@yandex.com
+primes v1.0.0 - jaimemccann@yandex.com
 This quasi-"hello world" serves as my foray into GNU Autotools.
 It is usable to maintain a rudimentary database of prime numbers.
 
